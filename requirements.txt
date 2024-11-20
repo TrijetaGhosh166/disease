@@ -1,4 +1,4 @@
 streamlit
 scikit-learn
 numpy
-pickle5
+joblib
