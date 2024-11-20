@@ -1,5 +1,5 @@
 import streamlit as st
-import pickle
+import joblib
 import numpy as np
 import pandas as pd
 df=pd.read_csv("Symptom-severity.csv")
@@ -18,8 +18,8 @@ dis=symptoms_weight(df)
 # Load the saved model
 @st.cache_resource
 def load_model():
-    with open('knn.sav', 'rb') as file:
-        model = pickle.load(file)
+    with open('knn1.pkl', 'rb') as file:
+        model = joblib.load(file)
     return model
 
 model = load_model()
